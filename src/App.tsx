@@ -8,14 +8,7 @@ import { Routes, Route } from "react-router";
 
 function App() {
   return (
-    <div className="mt-16">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/about" element={<About />} />
-        {/* <Route path="/contact" element={<Contact />} /> */}
-      </Routes>
-    </div>
+    <Home />
   )
 }
 

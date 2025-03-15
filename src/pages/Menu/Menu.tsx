@@ -1,13 +1,16 @@
 import "./Menu.css"
 import { Link } from "react-router";
 import { menu } from "../../data/data"
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 // h-screen
 function Menu() {
     return (
         <>
             {/* Menu Header */} 
-            <section className="flex flex-col justify-start items-center items-center text-center overflow-hidden bg-[#FAF3E0]">
+            <Navbar />
+            <section className="mt-16 flex flex-col justify-start items-center items-center text-center overflow-hidden bg-[#FAF3E0]">
                 {/* <div className="w-[70%] h-[30%] bg-center bg-cover bg-[url(https://images.unsplash.com/photo-1504718855392-c0f33b372e72?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)]"></div> */}
                 {/* <div className="w-full h-[30%]">
                     <img className="m-auto object-fit" src="https://images.unsplash.com/photo-1504718855392-c0f33b372e72?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="restaurant lights" />
@@ -79,7 +82,7 @@ function Menu() {
             {/* Menu categories (Tabs: Starters | Mains | Desserts) */}
             {/* MENU GRID (Images, Dish Name, Description, Price) */}
             {/* CTA (Reserve Table Button) */}
-
+            <Footer />
         </>
     )
 }

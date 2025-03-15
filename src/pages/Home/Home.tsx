@@ -1,4 +1,6 @@
 import { Link } from "react-router";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   const featured = [
@@ -39,52 +41,54 @@ const Home = () => {
 
   return (
     <>
-    {/* Hero section */} {/* bg-[#D9531E] */}
-    <section className="h-screen flex flex-col justify-center items-center text-center px-4 bg-cover bg-[url(https://images.unsplash.com/photo-1671044157944-9d949e347394?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)]">
-      <h1 className="text-4xl text-[#FAF3E0]">Welcome to Ember & Sage</h1>
-      <p className="text-xl mt-3 text-[#333333] w-120 text-wrap">Where every meal is an experience, crafted with passion and locally sourced ingredients.</p>
-      <Link to="/menu" className="mt-6 mb-30 px-6 py-2 bg-[#333333] rounded-md hover:bg-[#A4B494]"><div className="text-white">View Menu</div></Link>
-    </section>
-    {/* Featured Dishes */}
-    <section className="h-screen flex flex-col justify-start items-center text-center px-4 bg-[#FAF3E0]">
-      <h1 className="mt-20 text-4xl text-[#333333]">Featured Dishes</h1>
+      <Navbar />
+      {/* Hero section */} {/* bg-[#D9531E] */}
+      <section className="h-screen flex flex-col justify-center items-center text-center px-4 bg-cover bg-[url(https://images.unsplash.com/photo-1671044157944-9d949e347394?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)]">
+        <h1 className="text-4xl text-[#FAF3E0]">Welcome to Ember & Sage</h1>
+        <p className="text-xl mt-3 text-[#333333] w-120 text-wrap">Where every meal is an experience, crafted with passion and locally sourced ingredients.</p>
+        <Link to="/ember-sage/menu" className="mt-6 mb-30 px-6 py-2 bg-[#333333] rounded-md hover:bg-[#A4B494]"><div className="text-white">View Menu</div></Link>
+      </section>
+      {/* Featured Dishes */}
+      <section className="h-screen flex flex-col justify-start items-center text-center px-4 bg-[#FAF3E0]">
+        <h1 className="mt-20 text-4xl text-[#333333]">Featured Dishes</h1>
 
-      <div className="mt-20 flex flex-row flex-wrap gap-10">
-        {featured.map((dish) => (
-          <div key={dish.id} className="overflow-hidden w-90 h-95 rounded-lg hover:shadow-xl transition p-4">
-            <img className="rounded-lg w-full h-50 object-cover cursor-pointer" src={dish.image} alt="dish image" />
-            <p className="mt-6 text-[#D9531E]">{dish.name}</p>
-            <p className="text-[#333333]">{dish.description}</p>
-            <p className="text-[#333333]">{dish.price}</p>
-          </div>
-        ))}
-      </div>
-      {/* <p className="text-xl mt-3">Grid Items / Cards (3-4)</p> */}
-    </section>
-    {/* About Teaser */}
-    <section className="h-[50%] py-22 flex flex-col justify-center items-center text-center px-100 bg-[#A4B494]">
-      <h1 className=" text-4xl text-[#333333]">{about.title}</h1>
-      <p className="text-xl mt-10 text-[#FAF3E0]">{about.preview}</p>
-      <Link to="/about" className="mt-6 px-6 py-2 bg-[#D9531E] rounded-md hover:bg-[#333333]"><div className="text-white">Learn More</div></Link>
-    </section>
-    {/* Customer Reviews */}
-    <section className="h-screen flex flex-col justify-center items-center text-center px-4 bg-[#FAF3E0]">
-      <h1 className="text-4xl text-[#333333]">Customer Reviews</h1>
-      {/* a star */}
-      {/* <div className="rounded-lg w-3 h-3 bg-[#D9531E]"></div> a star */}
-      {/* <p className="text-[#333333]">Customer Name</p> */}
+        <div className="mt-20 flex flex-row flex-wrap gap-10">
+          {featured.map((dish) => (
+            <div key={dish.id} className="overflow-hidden w-90 h-95 rounded-lg hover:shadow-xl transition p-4">
+              <img className="rounded-lg w-full h-50 object-cover cursor-pointer" src={dish.image} alt="dish image" />
+              <p className="mt-6 text-[#D9531E]">{dish.name}</p>
+              <p className="text-[#333333]">{dish.description}</p>
+              <p className="text-[#333333]">{dish.price}</p>
+            </div>
+          ))}
+        </div>
+        {/* <p className="text-xl mt-3">Grid Items / Cards (3-4)</p> */}
+      </section>
+      {/* About Teaser */}
+      <section className="h-[50%] py-22 flex flex-col justify-center items-center text-center px-100 bg-[#A4B494]">
+        <h1 className=" text-4xl text-[#333333]">{about.title}</h1>
+        <p className="text-xl mt-10 text-[#FAF3E0]">{about.preview}</p>
+        <Link to="/ember-sage/about" className="mt-6 px-6 py-2 bg-[#D9531E] rounded-md hover:bg-[#333333]"><div className="text-white">Learn More</div></Link>
+      </section>
+      {/* Customer Reviews */}
+      <section className="h-screen flex flex-col justify-center items-center text-center px-4 bg-[#FAF3E0]">
+        <h1 className="text-4xl text-[#333333]">Customer Reviews</h1>
+        {/* a star */}
+        {/* <div className="rounded-lg w-3 h-3 bg-[#D9531E]"></div> a star */}
+        {/* <p className="text-[#333333]">Customer Name</p> */}
 
-      <div className="mt-20 flex flex-row flex-wrap gap-10">
-        {reviews.map((review) => (
-          <div key={review.id} className="overflow-hidden w-90 h-60 p-4 rounded-sm hover:shadow-xl transition">
-            <p className="mt-10 text-[#D9531E]">{review.name}</p>
-            <p className="mt-1">{review.stars}</p>
-            <p className="mt-2 text-[#333333]">{review.comment}</p>
-          </div>
-        ))}
-      </div>
-      {/* <p className="text-xl mt-3">Carousel or Cards (3-4)</p> */}
-    </section>
+        <div className="mt-20 flex flex-row flex-wrap gap-10">
+          {reviews.map((review) => (
+            <div key={review.id} className="overflow-hidden w-90 h-60 p-4 rounded-sm hover:shadow-xl transition">
+              <p className="mt-10 text-[#D9531E]">{review.name}</p>
+              <p className="mt-1">{review.stars}</p>
+              <p className="mt-2 text-[#333333]">{review.comment}</p>
+            </div>
+          ))}
+        </div>
+        {/* <p className="text-xl mt-3">Carousel or Cards (3-4)</p> */}
+      </section>
+      <Footer />
     </>
   );
 };

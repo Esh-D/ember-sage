@@ -9,13 +9,13 @@ function Navbar() {
                 <div className="space-x-6">
                     <ul className="flex flex-row flex-wrap gap-30">
                         <li>
-                            <Link to="/"><div className="text-[#333333] hover:text-[#D9531E]">Home</div></Link>
+                            <Link to="/ember-sage"><div className="text-[#333333] hover:text-[#D9531E]">Home</div></Link>
                         </li>
                         <li>
-                            <Link to="/menu"><div className="text-[#333333] hover:text-[#D9531E]">Menu</div></Link>
+                            <Link to="/ember-sage/menu"><div className="text-[#333333] hover:text-[#D9531E]">Menu</div></Link>
                         </li>
                         <li>
-                            <Link to="/about"><div className="text-[#333333] hover:text-[#D9531E]">About</div></Link>
+                            <Link to="/ember-sage/about"><div className="text-[#333333] hover:text-[#D9531E]">About</div></Link>
                         </li>
                         {/* <li>
                             <Link to="/contact"><div className="text-[#333333] hover:text-[#D9531E]">Contact</div></Link>
