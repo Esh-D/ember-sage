@@ -1,0 +1,29 @@
+/* styles not used */
+
+#nav-bar {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F8F8F8;
+}
+
+.nav-list {
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    margin: 30px;
+}
+
+.name {
+    margin: 30px;
+}
